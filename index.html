@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<base target="_self">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Global Ecom-Experts | E-commerce Consulting for Marketplaces, D2C & Global Growth</title>
+<meta name="description" content="Global Ecom-Experts helps brands start, grow, and scale online sales across marketplaces like Amazon and Flipkart, their own D2C websites, and international markets.">
+<meta name="theme-color" content="#F7F8FA">
+<meta property="og:title" content="Global Ecom-Experts | E-commerce Consulting for Marketplaces, D2C & Global Growth">
+<meta property="og:description" content="Global Ecom-Experts helps brands start, grow, and scale online sales across marketplaces like Amazon and Flipkart, their own D2C websites, and international markets.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+<style>
+  :root {
+    --bg: #F7F8FA;
+    --bg-alt: #EEF0F3;
+    --surface: #FFFFFF;
+    --text: #2D3136;
+    --muted: #6B7280;
+    --accent: #4A6FA5;
+    --accent-dark: #3B5A88;
+    --accent-soft: #E6ECF5;
+    --line: #E2E5EA;
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --shadow: 0 1px 2px rgba(45,49,54,.04), 0 6px 18px rgba(45,49,54,.06);
+    --shadow-lift: 0 2px 4px rgba(45,49,54,.05), 0 16px 32px rgba(45,49,54,.10);
+    --font: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --max: 1160px;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(96px + env(safe-area-inset-top, 0px)); }
+  body {
+    margin: 0; font-family: var(--font); color: var(--text); background: var(--bg);
+    font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+  img, svg { max-width: 100%; display: block; }
+  a { color: var(--accent); }
+  h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; letter-spacing: -0.02em; }
+  h1 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); font-weight: 800; }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; }
+  h3 { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
+  p { margin: 0 0 1em; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .lead { font-size: 1.15rem; color: var(--muted); max-width: 58ch; }
+  .muted { color: var(--muted); }
+  .skip {
+    position: absolute; left: -999px; top: 8px; background: var(--text); color: #fff;
+    padding: 10px 16px; border-radius: 8px; z-index: 100;
+  }
+  .skip:focus { left: 16px; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: .5em; font: inherit; font-weight: 600;
+    font-size: .98rem; padding: 14px 26px; border-radius: 999px; border: 1.5px solid transparent;
+    text-decoration: none; cursor: pointer; transition: background .2s, transform .2s, box-shadow .2s, color .2s;
+  }
+  .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 6px 16px rgba(74,111,165,.25); }
+  .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--text); border-color: var(--line); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-light { background: #fff; color: var(--accent-dark); }
+  .btn-light:hover { background: var(--accent-soft); }
+
+  /* Header */
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(247,248,250,.88); backdrop-filter: saturate(160%) blur(10px);
+    -webkit-backdrop-filter: saturate(160%) blur(10px);
+    border-bottom: 1px solid transparent; transition: border-color .2s, box-shadow .2s;
+  }
+  .site-header.scrolled { border-bottom-color: var(--line); box-shadow: 0 4px 16px rgba(45,49,54,.04); }
+  .nav { display: flex; align-items: center; justify-content: space-between; min-height: 84px; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+  .brand-mark {
+    width: 42px; height: 42px; border-radius: 12px; background: var(--accent-soft);
+    display: grid; place-items: center; color: var(--accent); flex-shrink: 0;
+  }
+  .brand-name { font-weight: 800; font-size: 1.12rem; letter-spacing: -0.02em; display: block; line-height: 1.2; }
+  .brand-tag { font-size: .78rem; color: var(--muted); font-weight: 500; display: block; line-height: 1.3; }
+  .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a:not(.btn) {
+    color: var(--text); text-decoration: none; font-weight: 500; font-size: .96rem;
+    padding: 10px 14px; border-radius: 8px; transition: color .2s, background .2s;
+  }
+  .nav-links a:not(.btn):hover { color: var(--accent); background: var(--bg-alt); }
+  .nav-links a[aria-current="page"]:not(.btn) { color: var(--accent); }
+  .nav-links .btn { margin-left: 8px; padding: 11px 22px; }
+  .menu-toggle {
+    display: none; background: none; border: 1px solid var(--line); border-radius: 10px;
+    width: 44px; height: 44px; cursor: pointer; color: var(--text); place-items: center;
+  }
+  .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+    display: block; width: 18px; height: 2px; background: currentColor; border-radius: 2px;
+    position: relative; transition: transform .25s, opacity .25s;
+  }
+  .menu-toggle span::before, .menu-toggle span::after { content: ""; position: absolute; left: 0; }
+  .menu-toggle span::before { top: -6px; }
+  .menu-toggle span::after { top: 6px; }
+  .menu-toggle[aria-expanded="true"] span { background: transparent; }
+  .menu-toggle[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+
+  /* Page switching */
+  .page[hidden] { display: none; }
+  section { padding: 88px 0; }
+  .section-head { max-width: 640px; margin-bottom: 48px; }
+  .alt { background: var(--bg-alt); }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+  /* Slideshow */
+  .slideshow-wrap { padding: 24px 0 0; }
+  .slideshow {
+    position: relative; border-radius: 22px; overflow: hidden; background: var(--bg-alt);
+    aspect-ratio: 21 / 8; box-shadow: var(--shadow);
+  }
+  .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease; }
+  .slide.active { opacity: 1; }
+  .slide img { width: 100%; height: 100%; object-fit: cover; }
+  .slide .fallback {
+    display: none; width: 100%; height: 100%; place-items: center; color: #A3AAB5; font-weight: 600;
+    background: linear-gradient(160deg, #EEF0F3, #E2E5EA);
+  }
+  .slide.broken img { display: none; }
+  .slide.broken .fallback { display: grid; }
+  .slide-controls {
+    position: absolute; left: 0; right: 0; bottom: 16px; display: flex; justify-content: center;
+    align-items: center; gap: 10px; z-index: 2;
+  }
+  .dots { display: flex; gap: 8px; background: rgba(45,49,54,.35); padding: 8px 12px; border-radius: 999px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0; background: rgba(255,255,255,.55); cursor: pointer; transition: background .2s, width .2s; }
+  .dot[aria-current="true"] { background: #fff; width: 22px; border-radius: 999px; }
+  .ctrl {
+    width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer;
+    background: rgba(255,255,255,.88); color: var(--text); display: grid; place-items: center;
+    box-shadow: 0 2px 8px rgba(45,49,54,.15); transition: background .2s;
+  }
+  .ctrl:hover { background: #fff; color: var(--accent); }
+  .arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; }
+  .arrow.prev { left: 16px; }
+  .arrow.next { right: 16px; }
+  .home-expertise { padding-top: 72px; }
+
+  /* Expertise */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card {
+    background: var(--surface); border-radius: var(--radius-lg); padding: 30px 28px;
+    box-shadow: var(--shadow); border: 1px solid rgba(226,229,234,.7);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+  .icon {
+    width: 48px; height: 48px; border-radius: 12px; background: var(--accent-soft);
+    color: var(--accent); display: grid; place-items: center; margin-bottom: 20px;
+  }
+  .card p { color: var(--muted); font-size: .96rem; margin: 0; }
+
+  /* Why us */
+  .why-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: start; }
+  .why-list { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 32px; }
+  .why-item .icon { width: 40px; height: 40px; border-radius: 10px; margin-bottom: 14px; }
+  .why-item p { color: var(--muted); font-size: .96rem; margin: 0; }
+  .testimonial {
+    margin-top: 36px; padding: 24px; border-radius: var(--radius-md); border: 1.5px dashed #C9CFD8;
+    color: var(--muted); font-size: .95rem; background: rgba(255,255,255,.5);
+  }
+
+  /* CTA banner */
+  .cta-band { padding: 0 0 96px; }
+  .cta-box {
+    background: var(--accent); color: #fff; border-radius: 24px; padding: 56px 48px;
+    display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
+    position: relative; overflow: hidden;
+  }
+  .cta-box::after {
+    content: ""; position: absolute; right: -80px; top: -80px; width: 280px; height: 280px;
+    border-radius: 50%; border: 1.5px solid rgba(255,255,255,.18);
+    box-shadow: 0 0 0 40px rgba(255,255,255,.04), 0 0 0 80px rgba(255,255,255,.03);
+    pointer-events: none;
+  }
+  .cta-box h2 { margin: 0 0 .3em; color: #fff; }
+  .cta-box p { margin: 0; color: rgba(255,255,255,.85); }
+  .cta-box > * { position: relative; z-index: 1; }
+
+  /* Inner page header */
+  .page-hero { padding: 72px 0 40px; }
+  .page-hero .lead { margin-bottom: 0; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .mission {
+    background: var(--surface); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent);
+  }
+  .mission p:last-child { margin: 0; }
+  .values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+  /* Experts */
+  .expert { padding: 0; overflow: hidden; }
+  .expert-photo {
+    aspect-ratio: 4 / 3; background: linear-gradient(160deg, #EEF0F3, #E2E5EA);
+    display: grid; place-items: center; color: #A3AAB5; font-size: .85rem; font-weight: 500; text-align: center;
+  }
+  .expert-photo svg { margin: 0 auto 8px; }
+  .expert-body { padding: 24px 26px 28px; }
+  .expert-role { color: var(--accent); font-weight: 600; font-size: .92rem; margin-bottom: 10px; }
+  .expert-body p:last-child { color: var(--muted); font-size: .95rem; margin: 0; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1.4fr .8fr; gap: 40px; align-items: start; }
+  form.card:hover, .contact-info.card:hover { transform: none; box-shadow: var(--shadow); }
+  .field { margin-bottom: 20px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  label { display: block; font-weight: 600; font-size: .92rem; margin-bottom: 8px; }
+  .req { color: var(--accent); }
+  .opt { color: var(--muted); font-weight: 400; }
+  input, select, textarea {
+    width: 100%; font: inherit; font-size: .98rem; color: var(--text); background: var(--bg);
+    border: 1.5px solid var(--line); border-radius: 10px; padding: 13px 14px;
+    transition: border-color .2s, background .2s;
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); background: #fff; box-shadow: 0 0 0 4px var(--accent-soft); }
+  textarea { min-height: 150px; resize: vertical; }
+  .error { color: #B4443C; font-size: .85rem; margin-top: 6px; display: none; }
+  .field.invalid input, .field.invalid select, .field.invalid textarea { border-color: #B4443C; }
+  .field.invalid .error { display: block; }
+  .form-status {
+    display: none; padding: 16px 18px; border-radius: 10px; background: var(--accent-soft);
+    color: var(--accent-dark); font-weight: 500; margin-top: 20px;
+  }
+  .form-status.show { display: block; }
+  .info-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 22px; }
+  .info-item .icon { width: 40px; height: 40px; margin: 0; flex-shrink: 0; border-radius: 10px; }
+  .info-item strong { display: block; font-size: .92rem; }
+  .info-item a, .info-item span { color: var(--muted); text-decoration: none; }
+  .info-item a:hover { color: var(--accent); }
+
+  /* Footer */
+  footer { background: var(--text); color: #C9CED6; padding: 64px 0 32px; font-size: .95rem; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+  footer .brand { color: #fff; }
+  footer .brand-mark { background: rgba(255,255,255,.08); color: #A9C0E3; }
+  footer .brand-tag { color: #9AA1AC; }
+  footer h3 { color: #fff; font-size: .98rem; margin-bottom: 14px; }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer li { margin-bottom: 8px; }
+  footer a { color: #C9CED6; text-decoration: none; }
+  footer a:hover { color: #fff; }
+  .socials { display: flex; gap: 10px; margin-top: 20px; }
+  .socials a {
+    width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,.07);
+    display: grid; place-items: center; transition: background .2s;
+  }
+  .socials a:hover { background: var(--accent); }
+  .foot-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 48px; padding-top: 24px; color: #9AA1AC; font-size: .88rem; }
+
+  /* Fade-in on scroll */
+  .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+  .js .reveal.visible { opacity: 1; transform: none; }
+
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .values { grid-template-columns: repeat(2, 1fr); }
+    .why-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .slideshow { aspect-ratio: 16 / 8; }
+  }
+  /* Tablet: keep links in one row, just tighter */
+  @media (max-width: 900px) {
+    .nav { gap: 12px; }
+    .nav-links { gap: 2px; }
+    .nav-links a:not(.btn) { padding: 8px 10px; font-size: .9rem; }
+    .nav-links .btn { margin-left: 4px; padding: 10px 16px; font-size: .9rem; }
+    .brand-mark { width: 36px; height: 36px; }
+    .brand-name { font-size: 1rem; }
+  }
+  /* Hamburger menu from 760px down (4 nav items need the room) */
+  @media (max-width: 760px) {
+    .menu-toggle { display: grid; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch;
+      background: var(--bg); border-bottom: 1px solid var(--line); padding: 12px 24px 24px; gap: 4px;
+      box-shadow: 0 16px 24px rgba(45,49,54,.08); display: none;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a:not(.btn) { padding: 14px 12px; font-size: 1rem; }
+    .nav-links .btn { margin: 10px 0 0; justify-content: center; }
+  }
+  /* Small phones only: hamburger menu */
+  @media (max-width: 640px) {
+    .menu-toggle { display: grid; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch;
+      background: var(--bg); border-bottom: 1px solid var(--line); padding: 12px 24px 24px; gap: 4px;
+      box-shadow: 0 16px 24px rgba(45,49,54,.08);
+      display: none;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a:not(.btn) { padding: 14px 12px; font-size: 1rem; }
+    .nav-links .btn { margin: 10px 0 0; justify-content: center; }
+    body { font-size: 16px; }
+    section { padding: 64px 0; }
+    .grid-3, .values, .why-list, .field-row, .foot-grid { grid-template-columns: 1fr; }
+    .brand-tag { font-size: .72rem; }
+    .cta-box { padding: 40px 28px; }
+    .slideshow { aspect-ratio: 4 / 3; border-radius: 16px; }
+    .arrow { display: none; }
+    .home-expertise { padding-top: 56px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    .js .reveal { opacity: 1; transform: none; }
+  }
+
+/* ===== Additions for multi-page site ===== */
+.draft-note { margin: 0 0 8px; padding: 14px 18px; border-radius: var(--radius-md); border: 1.5px dashed #C9CFD8;
+  background: rgba(255,255,255,.6); color: var(--muted); font-size: .95rem; }
+.form-card { padding: 0; overflow: hidden; }
+.form-card:hover { transform: none; box-shadow: var(--shadow); }
+.form-card iframe { width: 100%; height: 760px; border: 0; display: block; background: #fff; }
+.form-fallback { padding: 16px 24px 24px; font-size: .92rem; color: var(--muted); }
+.center-hero { min-height: 60vh; display: grid; align-items: center; text-align: left; }
+@media (max-width: 640px) { .form-card iframe { height: 880px; } }
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v10h16V10M3 6l1.5-3h15L21 6v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0V6z"/><path d="M10 20v-5h4v5"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9h4M7 12h7"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15.5 13 11V5.5a1.5 1.5 0 0 0-3 0V11l-7 4.5V17l7-2v3.5L8 20v1.5l3.5-1 3.5 1V20l-2-1.5V15l8 2z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9-9-9z"/><circle cx="8" cy="8" r="1.5"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-3-3c1-4 4-8 11-9-1 7-5 10-9 11z"/><path d="M9 12H5l2-4h4M12 15v4l4-2v-4"/><path d="M6 16c-1.5 1-2 3-2 4 1 0 3-.5 4-2"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12V5.5a1.5 1.5 0 0 1 3 0V11M11 10V4.5a1.5 1.5 0 0 1 3 0V11M14 10V6a1.5 1.5 0 0 1 3 0v7c0 4-2.5 8-7 8-3 0-4.5-2-6-5l-1-2a1.5 1.5 0 0 1 2.6-1.5L8 14"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 9h3v12H3zM9 9h2.9v1.7h.1c.4-.8 1.4-1.9 3.2-1.9 3.4 0 4 2.2 4 5.1V21h-3v-6.2c0-1.5 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V21H9z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.4-2.5.4-3.8s-.1-2.6-.4-3.8zM10 15.2V8.8l5.2 3.2z"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="top">
+  <nav class="wrap nav" aria-label="Main">
+    <a href="index.html" class="brand" aria-label="Global Ecom-Experts home">
+      <span class="brand-mark"><svg width="24" height="24" aria-hidden="true"><use href="#i-globe"/></svg></span>
+      <span>
+        <span class="brand-name">Global Ecom-Experts</span>
+        <span class="brand-tag">Helping brands sell smarter, everywhere</span>
+      </span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="experts.html">Our Experts</a></li>
+      <li><a href="contact.html" class="btn btn-primary">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <h1 class="sr-only" tabindex="-1">Global Ecom-Experts: e-commerce consulting for marketplaces, D2C websites, and international growth</h1>
+
+  <div class="slideshow-wrap">
+    <div class="wrap">
+      <div class="slideshow" aria-roledescription="carousel" aria-label="Featured images">
+        <div class="slide active" role="group" aria-roledescription="slide" aria-label="1 of 5">
+          <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1800&q=75" alt="Shopping bags and a laptop, representing online shopping" loading="eager" onerror="this.parentElement.classList.add('broken')">
+          <div class="fallback">[Image 1]</div>
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1800&q=75" alt="A customer paying online with a card" loading="lazy" onerror="this.parentElement.classList.add('broken')">
+          <div class="fallback">[Image 2]</div>
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=75" alt="A fulfilment warehouse with packed shelves" loading="lazy" onerror="this.parentElement.classList.add('broken')">
+          <div class="fallback">[Image 3]</div>
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1800&q=75" alt="A laptop showing sales analytics charts" loading="lazy" onerror="this.parentElement.classList.add('broken')">
+          <div class="fallback">[Image 4]</div>
+        </div>
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1800&q=75" alt="A business dashboard with performance data" loading="lazy" onerror="this.parentElement.classList.add('broken')">
+          <div class="fallback">[Image 5]</div>
+        </div>
+        <button class="ctrl arrow prev" type="button" aria-label="Previous image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+        <button class="ctrl arrow next" type="button" aria-label="Next image"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+        <div class="slide-controls">
+          <div class="dots"></div>
+          <button class="ctrl pause" type="button" aria-label="Pause slideshow"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="home-expertise" id="expertise" aria-labelledby="expertise-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 id="expertise-h">Areas of expertise</h2>
+        <p class="lead">Everything it takes to sell online, handled by people who do it every day.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card reveal"><div class="icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-store"/></svg></div><h3>Marketplace Management</h3><p>Amazon, Flipkart, eBay, and more: listings, account health, and steady growth.</p></article>
+        <article class="card reveal"><div class="icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-monitor"/></svg></div><h3>D2C Website Development</h3><p>High-converting Shopify and WooCommerce stores built around your customers.</p></article>
+        <article class="card reveal"><div class="icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-plane"/></svg></div><h3>Cross-Border E-commerce</h3><p>Take your products to international markets with the right setup from day one.</p></article>
+        <article class="card reveal"><div class="icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-target"/></svg></div><h3>Performance Marketing</h3><p>ROI-focused ads on Google, Meta, and marketplaces that pay for themselves.</p></article>
+        <article class="card reveal"><div class="icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-search"/></svg></div><h3>SEO &amp; Content</h3><p>Organic visibility for your store and product pages, so buyers find you first.</p></article>
+        <article class="card reveal"><div class="icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-tag"/></svg></div><h3>Catalog &amp; Listing Optimization</h3><p>Titles, images, and A+ content that turn browsers into buyers.</p></article>
+        <article class="card reveal"><div class="icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-truck"/></svg></div><h3>Logistics &amp; Fulfillment</h3><p>Warehousing, shipping, and returns strategy that keeps customers happy and costs in check.</p></article>
+        <article class="card reveal"><div class="icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-chart"/></svg></div><h3>Analytics &amp; Reporting</h3><p>Clear dashboards that show what's working, so every decision is backed by data.</p></article>
+        <article class="card reveal"><div class="icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-rocket"/></svg></div><h3>E-commerce Strategy &amp; Launch</h3><p>From idea to first sale and beyond, with a plan you can actually follow.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" aria-labelledby="why-h">
+    <div class="wrap why-grid">
+      <div class="reveal">
+        <h2 id="why-h">Why brands choose us</h2>
+        <p class="lead">We're a small team of practitioners, not a faceless agency. You work directly with the people doing the work.</p>
+        <div class="testimonial">[Client testimonial: add a short quote from a real client, with their name, role, and company, once you have permission to share it.]</div>
+      </div>
+      <div class="why-list">
+        <div class="why-item reveal"><div class="icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-hand"/></svg></div><h3>Hands-on experts</h3><p>Your account is run by specialists who have managed real stores and marketplaces, not handed off to juniors.</p></div>
+        <div class="why-item reveal"><div class="icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-globe"/></svg></div><h3>Global reach</h3><p>We help you sell beyond your home market, with guidance on platforms, compliance, and shipping abroad.</p></div>
+        <div class="why-item reveal"><div class="icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-eye"/></svg></div><h3>Transparent pricing</h3><p>Clear scopes and fees agreed up front. No hidden charges and no long lock-ins.</p></div>
+        <div class="why-item reveal"><div class="icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-trend"/></svg></div><h3>Focused on results</h3><p>We agree on the goals that matter to your business and report on them honestly, every month.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band" style="padding-top:96px">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <div>
+          <h2>Ready to grow your online business?</h2>
+          <p>Tell us where you are today. We'll suggest a clear next step, free of charge.</p>
+        </div>
+        <a href="contact.html" class="btn btn-light">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="brand" aria-label="Global Ecom-Experts home">
+          <span class="brand-mark"><svg width="24" height="24" aria-hidden="true"><use href="#i-globe"/></svg></span>
+          <span><span class="brand-name">Global Ecom-Experts</span><span class="brand-tag">Helping brands sell smarter, everywhere</span></span>
+        </a>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn (link to be added)"><svg width="18" height="18" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+          <a href="#" aria-label="Instagram (link to be added)"><svg width="18" height="18" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+          <a href="#" aria-label="X (link to be added)"><svg width="18" height="18" aria-hidden="true"><use href="#i-x"/></svg></a>
+          <a href="#" aria-label="YouTube (link to be added)"><svg width="18" height="18" aria-hidden="true"><use href="#i-youtube"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="experts.html">Our Experts</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:hello@example.com">[hello@yourdomain.com]</a></li>
+          <li><a href="tel:+000000000000">[+00 00000 00000]</a></li>
+          <li>[City, Country]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© <span id="year"></span> Global Ecom-Experts. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('nav-links');
+  const yr = document.getElementById('year'); if (yr) yr.textContent = new Date().getFullYear();
+
+  /* Mobile menu */
+  function closeMenu() { menu.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open menu'); }
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  menu.addEventListener('click', e => { if (e.target.closest('a')) closeMenu(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('open')) { closeMenu(); toggle.focus(); } });
+
+  /* Header shadow on scroll */
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* Fade-in on scroll */
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach((el, i) => { el.style.transitionDelay = (i % 3) * 70 + 'ms'; io.observe(el); });
+  } else items.forEach(el => el.classList.add('visible'));
+  /* Safety net: never leave content hidden if the observer doesn't fire */
+  setTimeout(() => items.forEach(el => el.classList.add('visible')), 1500);
+  window.addEventListener('load', () => setTimeout(() => items.forEach(el => el.classList.add('visible')), 600));
+
+  /* Hero -> expertise smooth scroll (home only) */
+  document.querySelectorAll('[data-scroll]').forEach(a => a.addEventListener('click', e => {
+    const t = document.getElementById('expertise'); if (!t) return;
+    e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' });
+  }));
+
+  (function () {
+    const root = document.querySelector('.slideshow');
+    if (!root) return;
+    const slides = [...root.querySelectorAll('.slide')];
+    const dotsEl = root.querySelector('.dots');
+    const pauseBtn = root.querySelector('.pause');
+    const pauseIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+    const playIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5v14l12-7z"/></svg>';
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let i = 0, timer = null, userPaused = reduced;
+    const dots = slides.map((_, n) => {
+      const d = document.createElement('button');
+      d.type = 'button'; d.className = 'dot'; d.setAttribute('aria-label', 'Show image ' + (n + 1));
+      d.addEventListener('click', () => { go(n); restart(); });
+      dotsEl.appendChild(d); return d;
+    });
+    function go(n) {
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s, k) => { s.classList.toggle('active', k === i); s.setAttribute('aria-hidden', String(k !== i)); });
+      dots.forEach((d, k) => d.setAttribute('aria-current', String(k === i)));
+    }
+    function start() { if (!userPaused && !timer) timer = setInterval(() => go(i + 1), 5000); }
+    function stop() { clearInterval(timer); timer = null; }
+    function restart() { stop(); start(); }
+    function renderPause() {
+      pauseBtn.innerHTML = userPaused ? playIcon : pauseIcon;
+      pauseBtn.setAttribute('aria-label', userPaused ? 'Play slideshow' : 'Pause slideshow');
+    }
+    pauseBtn.addEventListener('click', () => { userPaused = !userPaused; renderPause(); userPaused ? stop() : start(); });
+    root.querySelector('.prev').addEventListener('click', () => { go(i - 1); restart(); });
+    root.querySelector('.next').addEventListener('click', () => { go(i + 1); restart(); });
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    root.addEventListener('focusin', stop);
+    root.addEventListener('focusout', start);
+    document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+    let x0 = null;
+    root.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', e => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) { go(dx < 0 ? i + 1 : i - 1); restart(); }
+      x0 = null;
+    });
+    go(0); renderPause(); start();
+  })();
+})();
+
+</script>
+</body>
+</html>
